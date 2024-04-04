@@ -6,7 +6,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.show, name='home'),
     path('add/', views.add, name='add'),
-    path('detail/<int:detail_id>/', views.read, name='detail'),
-    path('edit/<int:detail_id>/', views.edit, name="edit"),
-    path('delete/<int:detail_id>/', views.delete, name="delete"),
+    path('detail/<int:detail_id>/', views.edit, name='detail'),
+    # path('edit/<int:detail_id>/', views.edit, name="edit"),
+    # path('delete/<int:detail_id>/', views.delete, name="delete"),
 ]

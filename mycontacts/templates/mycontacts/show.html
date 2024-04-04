@@ -13,12 +13,14 @@
             <div class="relation">{{ data.relation }}</div>
             <div class="phone">{{ data.phone }}</div>
             <div class="email"><a href='{{ data.email }}'>{{ data.email }}</a> </div>
+            {% comment %}
             <a href="{% url 'edit' data.id %}"> 
                 <img src="static/img/edit.png" height="60px">
             </a>
             <a href="{% url 'delete' data.id %}">
                 <img src="static/img/delete.webp" height="60px">
             </a>
+            {% endcomment %}
                         
         </div>
     </li>
