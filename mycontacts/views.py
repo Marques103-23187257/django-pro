@@ -27,7 +27,7 @@ def add(request):
             
             """ This is how your model connects to database and create a new member """
             Contact.objects.create(
-                name     =  new_member_name,
+                name     = new_member_name,
                 relation = new_member_relation,
                 phone    = new_member_phone,
                 email    = new_member_email,
@@ -64,14 +64,14 @@ def edit(request, detail_id):
             edit_member_email    = django_form.data.get('email')
         
            
-            data.name     =  edit_member_name
+            data.name     = edit_member_name
             data.relation = edit_member_relation
             data.phone    = edit_member_phone
             data.email    = edit_member_email               
             data.save()
 
             contact_list = Contact.objects.all()
-            return HttpResponseRedirect("/")   
+            return HttpResponseRedirect("/")
         
         else:
             """ redirect to the same page if django_form goes wrong """

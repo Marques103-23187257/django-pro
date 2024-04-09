@@ -57,3 +57,11 @@ textarea {
 	color: #0b3B39;
 	transform: translateX(-1px);
 }
+
+.delete_edit_contact_buttons{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	border-color: red;
+	width: 100%;
+}

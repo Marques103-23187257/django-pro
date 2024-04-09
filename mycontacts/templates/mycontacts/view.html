@@ -4,11 +4,18 @@
 
   <div class="container-add">      
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xs-offset-3">
-        		
+
+      <div class="delete_edit_contact_buttons">
+        <a href="{% url 'delete' data.id %}" class="btn">delete</a>
+        <a href="{% url 'edit' data.id %}" class="btn">edit</a>
+      </div>
+
+      
       <form id="add-contact-form" class="form" action="#" method="POST" role="form">
-            
-              {% csrf_token %}              
-              
+        
+              {% csrf_token %}
+
+
               <div class="form-group">
                   <label class="form-label">Name</label>
                   <input disabled="True" type="text" class="form-control" id="name" name="name" placeholder="Name" tabindex="1" value="{{data.name}}">
@@ -24,12 +31,10 @@
               <div class="form-group">
                   <label class="form-label" for="email">Email</label>
                   <input disabled="True" type="text" class="form-control" id="email" name="email" placeholder="Email" tabindex="4" value="{{data.email}}">
-              </div>                            
+              </div>
               
               <div class="text-center">
-                <a class ="btn" href="{% url 'home'%}">
-                  Back
-                </a>
+                <a class ="btn" href="{% url 'home'%}">Back</a>
               </div>
             </form>
           

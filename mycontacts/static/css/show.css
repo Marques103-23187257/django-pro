@@ -98,7 +98,7 @@ body {
 	text-decoration:none;
 	display:block;
     color:white;
-	background: url(image url) center center no-repeat;
+	background: center center no-repeat;
 	margin-right: 12px;
 	padding: 15px 25px;
 }
